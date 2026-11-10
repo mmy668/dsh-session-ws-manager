@@ -1,0 +1,9 @@
+# 临时/运行时产物（插件零依赖，无需 node_modules）
+*.bak
+*.bak-swm-*
+*.tmp-swm
+*.log
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini

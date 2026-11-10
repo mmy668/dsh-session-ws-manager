@@ -1,0 +1,49 @@
+{
+  "name": "dsh-session-ws-manager",
+  "version": "0.2.0",
+  "description": "DSH 会话工作区管理面板 — 查看会话与成果文件、安全删除会话（三种模式+插件回收站）、数据体检与一键修复",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmy668/dsh-session-ws-manager.git"
+  },
+  "homepage": "https://github.com/mmy668/dsh-session-ws-manager",
+  "author": "mmy668",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dshhub": {
+    "schemaVersion": 1,
+    "displayName": "DSH 会话工作区管理",
+    "summary": "会话工作区管理面板：查看工作区/会话与成果文件、安全删除会话（插件回收站/系统回收站/彻底删除）、回收站恢复、数据体检与一键修复。",
+    "categories": [
+      "会话管理",
+      "Web UI",
+      "工具"
+    ],
+    "surfaces": [
+      "host",
+      "web"
+    ],
+    "compatibility": {
+      "dsh": ">=0.2.0-rc.1 <0.3.0-0",
+      "node": ">=20"
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "manifestVersion": 1
+  }
+}
